@@ -1,0 +1,72 @@
+.header {
+	padding: 17px 0;
+	border: $border #d6d6d6;
+}
+
+.header-wrap {
+	@include flexBC;
+}
+
+.header-nav {
+	@include flexBC;
+	gap: 70px;
+	font-weight: 500;
+	color: $mainTextColor;
+
+	&__link {
+		transition: $transition color;
+
+		&:hover {
+			color: $accentColor;
+		}
+	}
+}
+
+.header-login {
+	@include flexBC;
+	gap: 35px;
+	font-weight: 400;
+
+	&__link {
+		transition: $transition color;
+
+		&:hover {
+			color: $accentColor;
+		}
+	}
+
+	&__button {
+		padding: 13px 50px;
+	}
+}
+
+.burger-menu {
+	fill: $accentColor;
+	display: none;
+}
+
+@media (max-width: 1024px) {
+	.header-nav {
+		gap: 30px;
+		font-size: 16px;
+	}
+
+	.header-login {
+		gap: 20px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 820px) {
+	.header-nav {
+		display: none;
+	}
+
+	.header-login {
+		display: none;
+	}
+
+	.burger-menu {
+		display: block;
+	}
+}

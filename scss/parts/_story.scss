@@ -1,0 +1,69 @@
+.story {
+	background-color: #245852;
+	color: #fff;
+	padding: 229px 0 176px 0;
+}
+
+.story-wrap {
+	@include flexBC;
+	gap: 30px;
+}
+
+.story-textblock {
+	// max-width: 550px;
+	&__text {
+		font-weight: 600;
+		font-size: 25px;
+		line-height: 157%;
+		margin: 33px 0 55px 0;
+	}
+
+	&__button:hover {
+		color: #fff;
+		outline-color: #fff;
+	}
+}
+
+.story-videoblock {
+	position: relative;
+	max-width: 720px;
+	max-height: 420px;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	button {
+		position: absolute;
+		top: 40%;
+		right: 45%;
+		fill: #fff;
+		transition: $transition fill;
+
+		&:hover {
+			fill: $accentColor;
+		}
+	}
+}
+
+@media (max-width: 1179px) {
+	.story {
+		padding: 100px 0 80px;
+	}
+
+	.story-wrap {
+		@include flexVertical;
+	}
+}
+
+@media (max-width: 767px) {
+	.story-textblock__title {
+		font-size: 32px;
+	}
+
+	.story-textblock__text {
+		font-size: 14px;
+		margin: 20px 0;
+	}
+}

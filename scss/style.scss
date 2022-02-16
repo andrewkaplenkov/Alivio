@@ -1,0 +1,21 @@
+@import "../fonts/Georgia/stylesheet.css";
+@import "../fonts/Lato/stylesheet.css";
+
+@import "./extensions/vars";
+@import "./extensions/mixins";
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: $mainFw;
+	font-size: $mainFz;
+	color: $mainTextColor;
+}
+
+@import "./parts/common";
+
+@import "./parts/header";
+@import "./parts/home";
+@import "./parts/work";
+@import "./parts/story";
+@import "./parts/product";
+@import "./parts/footer";

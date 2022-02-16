@@ -1,0 +1,60 @@
+.none {
+	display: none !important;
+}
+
+.visibility-hidden {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	display: block;
+	margin-left: -10000px;
+	background: transparent;
+	font-size: 0;
+}
+
+.container {
+	@include container;
+}
+
+.btn,
+a.btn {
+	display: inline-block;
+	color: #fff;
+	padding: 20px 50px;
+	background-color: $accentColor;
+	border-radius: 4px;
+	outline: $border transparent;
+	transition: $transition color, $transition background-color, $transition outline-color;
+
+	&:hover {
+		color: $accentColor;
+		background-color: transparent;
+		outline-color: $accentColor;
+	}
+
+	&:focus {
+		outline: $border $accentColor;
+	}
+}
+
+.section-title {
+	font-family: "Georgia", serif;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 157%;
+	color: #fff;
+	position: relative;
+
+	&::before {
+		font-family: "Lato", sans-serif;
+		position: absolute;
+		top: -35px;
+		left: 0;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 157%;
+		color: $mainTextColor;
+	}
+}

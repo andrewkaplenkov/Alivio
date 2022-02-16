@@ -1,0 +1,160 @@
+.work {
+	padding: 200px 0 50px 0;
+}
+
+.work-header {
+	@include flexBC;
+	gap: 135px;
+
+	&__title {
+		color: $accentColor;
+
+		&::before {
+			content: "How it works";
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 150%;
+	}
+}
+
+.work-steps {
+	@include flexBC;
+	gap: 95px;
+}
+
+.step {
+	max-width: 390px;
+	@include flexVertical;
+
+	&__title {
+		font-family: "Georgia", serif;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 150%;
+		position: relative;
+		text-align: center;
+
+		&::before {
+			content: attr(data-number);
+			position: absolute;
+			font-size: 150px;
+			line-height: 150%;
+			font-weight: 400;
+			color: rgba(1, 153, 109, 0.2);
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 150%;
+		margin: 45px 0;
+	}
+
+	&__img {
+		border-radius: 12px;
+		// max-width: 390px;
+	}
+}
+
+.step-01 {
+	.step__title {
+		&::before {
+			top: -130px;
+			left: -87px;
+		}
+	}
+}
+
+.step-02 {
+	margin-top: 450px;
+
+	.step__title::before {
+		top: -134px;
+		left: -85px;
+	}
+}
+
+.step-03 {
+	margin-top: 50px;
+
+	.step__title::before {
+		top: -137px;
+		left: -122px;
+	}
+}
+
+@media (max-width: 1180px) {
+	.work {
+		padding: 100px 0 50px;
+	}
+
+	.work-header {
+		gap: 60px;
+
+		&__text {
+			font-size: 18px;
+		}
+	}
+
+	.work-steps {
+		gap: 20px;
+	}
+
+	.step {
+		max-width: 320px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.work-header {
+		gap: 30px;
+
+		&__title {
+			font-size: 32px;
+
+			&::before {
+				font-size: 16px;
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+			// line-height: 19px;
+		}
+	}
+
+	.work-steps {
+		gap: 10px;
+	}
+
+	.step {
+		max-width: 260px;
+	}
+}
+
+@media (max-width: 767px) {
+	.work-header {
+		@include flexVertical;
+		gap: 20px;
+	}
+
+	.work-steps {
+		@include flexVertical;
+		padding-top: 100px;
+		gap: 0;
+	}
+
+	.step {
+		max-width: 320px;
+	}
+
+	.step-02,
+	.step-03 {
+		margin-top: 100px;
+	}
+}
