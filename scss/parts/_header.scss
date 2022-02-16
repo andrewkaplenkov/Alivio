@@ -40,9 +40,24 @@
 	}
 }
 
-.burger-menu {
+.burger-menu,
+.burger-menu-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
 	fill: $accentColor;
 	display: none;
+	opacity: 1;
+	transform: scale(1);
+	transition: $transition transform, $transition opacity;
+}
+
+.closed {
+	opacity: 0;
+	transform: scale(0);
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
 
 @media (max-width: 1024px) {

@@ -29,9 +29,8 @@
 	max-width: 720px;
 	max-height: 420px;
 
-	img {
-		width: 100%;
-		height: 100%;
+	&:hover #video-button {
+		opacity: 1;
 	}
 
 	button {
@@ -40,11 +39,16 @@
 		right: 45%;
 		fill: #fff;
 		transition: $transition fill;
-
-		&:hover {
-			fill: $accentColor;
-		}
+		z-index: 25;
+		opacity: 0;
+		transition: $transition opacity;
 	}
+}
+
+.video-story {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
 }
 
 @media (max-width: 1179px) {

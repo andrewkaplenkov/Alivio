@@ -30,14 +30,35 @@
 					<a href="#" class="header-login__link">Sign in</a>
 					<button type="button" class="header-login__button btn">Start Trial</button>
 				</div>
-				<button class="burger-menu">
+				<button type="button" class="burger-menu">
 					<svg width="32" height="23" viewBox="0 0 32 23" xmlns="http://www.w3.org/2000/svg">
 						<path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
+					</svg>
+				</button>
+				<button type="button" class="burger-menu burger-menu-close closed">
+					<svg class="close" width="23" height="23" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z" />
 					</svg>
 				</button>
 			</div>
 		</div>
 	</header>
+
+	<div class="mobile-nav">
+		<nav>
+			<ul class="mobile-nav-wrap">
+				<li><a class="mobile-nav-wrap__link" href="#">Why Alivio</a></li>
+				<li><a class="mobile-nav-wrap__link" href="#">Solutions</a></li>
+				<li><a class="mobile-nav-wrap__link" href="#">Community</a></li>
+				<li><a class="mobile-nav-wrap__link" href="#">Pricing</a></li>
+			</ul>
+		</nav>
+		<div class="mobile-nav-login">
+			<a href="#" class="mobile-nav-login__link">Sign in</a>
+			<button type="button" class="mobile-nav-login__button btn">Start Trial</button>
+		</div>
+	</div>
 
 	<main>
 
@@ -108,15 +129,13 @@
 						<button type="button" class="btn story-textblock__button">Let’s get started</button>
 					</div>
 					<div class="story-videoblock">
-						<button type="button">
-							<svg width="82" height="82" viewBox="0 0 82 82" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M41.3715 0.407043C19.0808 0.407043 0.948334 18.5413 0.948334 40.8302C0.948334 63.1192 19.0808 81.2534 41.3715 81.2534C63.6622 81.2534 81.7947 63.1192 81.7947 40.8302C81.7947 18.5413 63.6622 0.407043 41.3715 0.407043ZM41.3715 77.8849C20.9395 77.8849 4.31688 61.2623 4.31688 40.8302C4.31688 20.3982 20.9395 3.77559 41.3715 3.77559C61.8036 3.77559 78.4262 20.3982 78.4262 40.8302C78.4262 61.2623 61.8036 77.8849 41.3715 77.8849Z" />
-								<path
-									d="M57.4419 39.414L33.8618 24.2553C33.3453 23.9182 32.6775 23.9 32.1446 24.1928C31.6017 24.4889 31.2662 25.0548 31.2662 25.6715V55.9889C31.2662 56.6057 31.6017 57.1716 32.1446 57.4677C32.3946 57.6043 32.6742 57.6733 32.9505 57.6733C33.2663 57.6733 33.5855 57.5844 33.8618 57.4052L57.4419 42.2465C57.9223 41.9373 58.215 41.4026 58.215 40.8302C58.215 40.2578 57.9223 39.7233 57.4419 39.414ZM34.6347 52.9032V28.7573L53.4154 40.8302L34.6347 52.9032Z" />
-							</svg>
+						<button type="button" id="video-button">
+							<img id="video-icon" width="82" height="82" src="./img/play.svg" alt="play">
 						</button>
-						<img src="./img/video.png" alt="video">
+						<!-- <img src="./img/video.png" alt="video"> -->
+						<video class="video-story" id="video">
+							<source src="./img/Woman opens laptop at airport.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 			</div>
@@ -169,6 +188,8 @@
 		</div>
 	</footer>
 
+
+	<script src="./js/script.js"></script>
 </body>
 
 </html>

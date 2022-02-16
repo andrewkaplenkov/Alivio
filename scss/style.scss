@@ -11,6 +11,10 @@ body {
 	color: $mainTextColor;
 }
 
+body.no-scroll {
+	overflow: hidden;
+}
+
 @import "./parts/common";
 
 @import "./parts/header";
@@ -19,3 +23,4 @@ body {
 @import "./parts/story";
 @import "./parts/product";
 @import "./parts/footer";
+@import "./parts/mobile-nav";

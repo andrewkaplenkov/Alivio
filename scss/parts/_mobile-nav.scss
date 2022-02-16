@@ -1,0 +1,43 @@
+.mobile-nav {
+	@include flexVertical;
+	position: fixed;
+	z-index: 99;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	transform: scaleY(0);
+	padding: 40px 0 80px;
+	transition: 0.5s ease transform;
+	transform-origin: top center;
+}
+
+.mobile-nav.active {
+	transform: scaleX(1);
+}
+
+.mobile-nav-wrap {
+	margin-bottom: 80px;
+	text-align: left;
+
+	li + li {
+		margin-top: 20px;
+	}
+
+	li a {
+		font-size: 22px;
+		text-transform: uppercase;
+	}
+}
+
+.mobile-nav-login {
+	@include flexVertical;
+
+	&__link {
+		font-size: 22px;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+
+	&__button {
+		font-size: 22px;
+	}
+}
